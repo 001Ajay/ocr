@@ -7,10 +7,6 @@
 
     <title>Cognizant OCR demo</title>
 
-    <meta name="Description" content="Optical Character Recognition demo in JavaScript"/>
-    <meta property="og:image" content="http://kdzwinel.github.io/JS-OCR-demo/img/process.png"/>
-    <link rel="image_src" href="http://kdzwinel.github.io/JS-OCR-demo/img/process.png"/>
-
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/jquery.Jcrop.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -18,63 +14,40 @@
 </head>
 <body class="step1">
 
-<!-- 
-<iframe src="https://kdzwinel.github.io/JS-OCR-demo/" style="width:80%;height:80%">
-</iframe>
- -->
 
-<div id="msg">
-	<div class="row">
-            <div class="col-sm-8">
-
-                <h1 class="page-header">OCR Utility</h1>
-                <form role="form">
-					<span>
-					<div class="form-group float-label-control">
-                        <label for="">Name</label>
-                        <input id="name" type="email" class="form-control" placeholder="Name">						
-                    </div>
-					<span class="opop" target="name">
-							<img src="img/ocr2.png" style="width:30px;height:30px;"></input>
-					</span>
-					</span><p>
-                    <div class="form-group float-label-control">
-                        <label for="">Country</label>
-                        <input id="country1" type="email" class="form-control" placeholder="Country">
-                    </div>
-                    <div class="form-group float-label-control">
-                        <label for="">SSN</label>
-                        <input id="ssn1" type="email" class="form-control" placeholder="SSN"> 
-                    </div>
-                </form>
-            </div>            
-        </div>
-
-		<!--
-	<span>
-		Name
+<div id="msg">	
+	<span class="frow">
+		<h3>Customer Registration</h3><p></p>
+	</span>
+	<span class="frow">
+	<div class="cls" style="clear"></div>
+	<div class="cls" style="clear"></div>
+		Name&nbsp;&nbsp;&nbsp;
 		<input type="text" id="name"></input>&nbsp;
 		<span class="opop" target="name">
-			<img src="img/ocr2.png" style="width:32px;height:32px;"></input>
+			<img src="img/ocr1.png" style="width:32px;height:30px;"></img>
 		</span>	
 	</span>
-	<div style="clear"></div>
-	<span>
+	<div class="cls" style="clear"></div>
+	<span class="frow">
 		Country
 		<input type="text" id="country"></input>&nbsp;
 		<span class="opop" target="country">
-			<img src="img/ocr2.png" style="width:32px;height:32px;"></input>
+			<img src="img/ocr1.png" style="width:32px;height:30px;"></img>
 		</span>
 	</span>	
-	<div style="clear"></div>
-	<span>
-		SSN
+	<div class="cls" style="clear"></div>
+	<span class="frow">
+		SSN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<input type="text" id="ssn"></input>&nbsp;
 		<span class="opop" target="ssn">
-			<img src="img/ocr2.png" style="width:32px;height:32px;"></input>
+			<img src="img/ocr1.png" style="width:32px;height:30px;"></img>
 		</span>
 	</span>
-	-->
+	<div class="cls" style="clear"></div>
+	<span class="frow">
+		<button id="submitBtn"class="btn btn-lg btn-primary mbtn" type="submit">Submit</button>
+	</span>
 </div>
 
 <div id="modal-popup" class="modal">
@@ -132,7 +105,7 @@
 			<!--
             <h1><i class="glyphicon glyphicon-text-height"></i></h1>
             <p class="lead">You'll find the recognized text below.</p>
-			-->
+			-->	
             <figure>
                 <canvas></canvas>
             </figure>
@@ -161,8 +134,8 @@
 			<!-- Select -->
             <li class="disabled">
 				<a href="#" data-step="2" style="width:80px">
-					&nbsp;&nbsp;
-					<img src="img/ocr1.png" style="width:32px;height:32px;">
+					&nbsp;
+					<img src="img/ocr3.png" style="width:34px;height:34px;">
 				</a>
 			</li>
 			<!-- Read -->
