@@ -328,26 +328,33 @@
         return false;
     });
 	
-	$('#submitBtn').click(function(){
+	$('#submitBtn').click(function(e){		
+		$('#resp').html('');
 		var name = $('#name').val();
 		var country = $('#country').val();
 		var ssn = $('#ssn').val();
+		
 		var info = {
-			Name:name,
-			Country:country,
-			SSN:ssn
+			"Name":name,
+			"Country":country,
+			"SSN":ssn
 		};
 		
 		$.ajax({
 			type: "POST",
-			url: "https://pegabpmhyd.cognizant.com/prweb/PRRestService/Onboarding/Profile/ProfileSetUp",
-			data: info,
+			dataType : "json",
+			contentType: "application/json; charset=utf-8",
+			url: "https://pegabpmhyd.cognizant.com/prweb/PRRestService/Onboarding/Profile/ProfileSetUp",			
+			data: JSON.stringify(info),
 			success: function(data){
-				console.log(data);
-			},
-			dataType: "JSON"
+				console.log(data);				
+				if(data.WelcomeNote == undefined){
+					$('#resp').html('Please try again.');
+				}else{
+					$('#resp').html(data.WelcomeNote+'<br> Your ClientId is '+data.ClientID);
+				}	
+				
+			}
 		});		
 	});	
-	
-	        	
 })();
